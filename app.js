@@ -11,8 +11,9 @@ app.get('/api/:docid', function (req, res) {
 app.post('/api/:docid', function (req, res) {
     var user_id = req.body.id;
     var token = req.body.token;
-
-    res.send('OK');
+    var input_rows = req.body.input;
+    
+    res.sendStatus(202);
 })
 
 app.listen(3000, function () {
